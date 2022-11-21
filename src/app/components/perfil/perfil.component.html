@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card mb-3" style="max-width: fluid;">
+                <div class="card-header bg-transparent"><h3>{{usuario.username}}</h3></div>
+                <div class="card-body">
+                  <h5 class="card-title">Nombre: {{usuario.name}}</h5>
+                  <p class="card-text">Email: {{usuario.email}}</p>
+                  <p class="card-text">Telefono: {{usuario.phone}}</p>
+                </div>
+                <div class="card-footer bg-transparent"></div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <h2>Publicaciones</h2>
+        <div class="col-10 publicaciones" *ngFor="let data of publicaciones">
+            <div class="card">
+                <h5 class="card-header">{{data.title}}</h5>
+                <div class="card-body">
+                  <p class="card-text">{{data.body}}</p>
+                </div>
+                <div class="card-footer">
+                    <a [routerLink]="['/publicacion', data.id]">Ver publicacion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

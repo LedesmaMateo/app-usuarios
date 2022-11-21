@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <h5 class="card-header">{{publicacion.title}}</h5>
+                <div class="card-body">
+                  <p class="card-text">{{publicacion.body}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card max-width: fluid;" *ngFor="let data of comentarios">
+                <h5 class="card-header">{{data.body}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
